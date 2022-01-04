@@ -1,17 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <title>splitter</title>
-</head>
-<body>
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Yang Ding</a>.
-  </div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>splitter</title>
+  </head>
+  <body>
+    <header>
+      <figure>
+        <img src="./images/logo.svg" alt="Logo" />
+      </figure>
+    </header>
+    <main>
+      <section class="user-inputs">
+        <div class="input-group">
+          <label for="bill-amount">Bill</label>
+          <input type="text" name="bill-amount" id="bill-amount" placeholder="0"/>
+          <img src="./images/icon-dollar.svg" alt="Dollar sign" />
+        </div>
+        <div class="input-group btns">
+          <label for="btns">Select Tip %</label>
+          <button>5%</button>
+          <button>10%</button>
+          <button>15%</button>
+          <button>20%</button>
+          <button>25%</button>
+          <input type="text" id="custom-tip" placeholder="Custom" />
+        </div>
+        <div class="input-group">
+          <label for="num-of-ppl">Number of People</label>
+          <input type="text" name="num-of-ppl" id="num-of-ppl" placeholder="0"/>
+          <img src="./images/icon-person.svg" alt="Person icon" />
+        </div>
+      </section>
+      <section class="info-display">
+        <section class="tip-info">
+          <h2>Tip Amount</h2>
+          <span>/ person</span>
+          <h3>$0.00</h3>
+        </section>
+        <section class="total-info">
+          <h2>Total</h2>
+          <span>/ person</span>
+          <h3>$0.00</h3>
+        </section>
+        <button id="reset">RESET</button>
+      </section>
+    </main>
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Yang Ding</a>.
+    </footer>
+  </body>
 </html>
