@@ -28,7 +28,12 @@
       <section class="user-inputs">
         <div class="input-group">
           <label for="bill-amount">Bill</label>
-          <input type="text" name="bill-amount" id="bill-amount" placeholder="0"/>
+          <input
+            type="text"
+            name="bill-amount"
+            id="bill-amount"
+            placeholder="0"
+          />
           <img src="./images/icon-dollar.svg" alt="Dollar sign" />
         </div>
         <div class="input-group btns">
@@ -42,20 +47,23 @@
         </div>
         <div class="input-group">
           <label for="num-of-ppl">Number of People</label>
-          <input type="text" name="num-of-ppl" id="num-of-ppl" placeholder="0"/>
+          <input
+            type="text"
+            name="num-of-ppl"
+            id="num-of-ppl"
+            placeholder="0"
+          />
           <img src="./images/icon-person.svg" alt="Person icon" />
         </div>
       </section>
       <section class="info-display">
         <section class="tip-info">
-          <h2>Tip Amount</h2>
-          <span>/ person</span>
-          <h3>$0.00</h3>
+          <h2>Tip Amount <span class="per-person">/ person </span></h2>
+          <p class="price" id="tip-per-person">$0.00</p>
         </section>
         <section class="total-info">
-          <h2>Total</h2>
-          <span>/ person</span>
-          <h3>$0.00</h3>
+          <h2>Total <span class="per-person">/ person </span></h2>
+          <p class="price" id="total-per-person">$0.00</p>
         </section>
         <button id="reset">RESET</button>
       </section>
