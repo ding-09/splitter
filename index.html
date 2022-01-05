@@ -51,9 +51,10 @@
           <label for="num-of-ppl">Number of People</label>
           <div class="input-container">
             <input
-              type="text"
+              type="number"
               name="num-of-ppl"
               id="num-of-ppl"
+              min="1"
               placeholder="0"
             />
             <img src="./images/icon-person.svg" alt="Person icon" />
@@ -69,7 +70,7 @@
           <h2>Total <span class="per-person">/ person </span></h2>
           <p class="price" id="total-per-person">$0.00</p>
         </section>
-        <button id="reset">RESET</button>
+        <button class="reset">RESET</button>
       </section>
     </main>
     <footer class="attribution">
