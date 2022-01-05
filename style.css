@@ -64,7 +64,6 @@ input[type='number'] {
 input[type='text']:focus,
 input[type='number']:focus {
   outline: 0.2rem solid hsl(172, 46%, 51%);
-
 }
 
 input[type='text']::placeholder,
@@ -146,12 +145,24 @@ input[type='number']::placeholder {
 
 .info-display {
   background-color: hsl(183, 100%, 15%);
+  padding: 3rem 1.8rem 2rem;
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-.tip-info h2,
-.total-info h2 {
-  color: hsl(189, 41%, 97%);
+.price-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+.price-info h2 {
+  color: hsl(189, 41%, 97%);
+  flex: 1;
+}
+
 
 .per-person {
   color: hsl(184, 14%, 56%);
@@ -160,7 +171,14 @@ input[type='number']::placeholder {
 .price {
   color: hsl(172, 67%, 45%);
   font-weight: 700;
+  flex: 2;
+  text-align: right;
 }
+
+
+
+
+
 
 /* RESET BUTTON  */
 
