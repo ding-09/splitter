@@ -67,8 +67,7 @@ input[type='number'] {
   letter-spacing: 0.2rem;
 }
 
-input[type='text']:focus,
-input[type='number']:focus {
+input[type='text']:focus, input[type='number']:focus {
   outline: 0.2rem solid hsl(172, 46%, 51%);
 }
 
@@ -141,6 +140,22 @@ input[type='number']::placeholder {
 .tip-btn-active {
   background-color: hsl(172, 67%, 45%);
   color: hsl(183, 100%, 15%);
+}
+
+/* ERROR STYLES FOR NUMBER OF PEOPLE */
+.error-msg {
+  color: hsl(0, 61.9%, 67.1%);
+  font-weight: 700;
+  font-size: 1.1rem;
+  position: absolute;
+  right: 0;
+  top: -75%;
+  display: none;
+}
+
+.error-outline {
+  /* let this outline color override the :focus outline color */
+  outline: 0.2rem solid hsl(0, 61.9%, 67.1%) !important;
 }
 
 /* DISPLAY INFO */

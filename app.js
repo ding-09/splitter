@@ -14,7 +14,19 @@ tipBtns.forEach((btn) => {
   });
 });
 
+// 2. add an error class + error msg display if user enters 0 for number of people
+const numOfPeople = document.querySelector('#num-of-ppl');
 
-// 2. add an error class + error msg displaya if user enters 0 for number of people
+numOfPeople.addEventListener('input', (event) => {
+  // if user input is 0, display error msg + add error class
+  const numInput = parseInt(event.target.value);
+  if (numInput === 0) {
+    event.target.previousElementSibling.style.display = 'inline';
+    event.target.classList.add('error-outline');
+  } else {
+    event.target.previousElementSibling.style.display = 'none';
+    event.target.classList.remove('error-outline');
+  }
+});
 
 // 3. allow reset button to be clickable when there is user input
