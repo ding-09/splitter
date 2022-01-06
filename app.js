@@ -20,6 +20,9 @@ tipBtns.forEach((btn) => {
     // store clicked button's tip percentage value into actual variabble
     const tip = parseFloat(event.target.dataset.tipPercentage);
     tipPercentage = tip;
+    if (billAmount && tipPercentage && numOfPpl) {
+      calculateAndUpdate();
+    }
   });
 });
 
@@ -36,6 +39,9 @@ numOfPeople.addEventListener('input', (event) => {
     event.target.previousElementSibling.style.display = 'none';
     event.target.classList.remove('error-outline');
     numOfPpl = numInput;
+    if (billAmount && tipPercentage && numOfPpl) {
+      calculateAndUpdate();
+    }
   }
 });
 
@@ -62,5 +68,20 @@ const splitBill = (billAmount, tipPercentage, numOfPpl) => {
 const bill = document.querySelector('#bill-amount');
 bill.addEventListener('input', (event) => {
   billAmount = parseFloat(event.target.value);
+  if (billAmount && tipPercentage && numOfPpl) {
+    calculateAndUpdate();
+  }
 });
 
+// calculate results and update info-display
+const tipAmountDisplay = document.querySelector('#tip-per-person');
+const totalAmountDisplay = document.querySelector('#total-per-person');
+const calculateAndUpdate = () => {
+  const { tipPerPerson, totalPerPerson } = splitBill(
+    billAmount,
+    tipPercentage,
+    numOfPpl
+  );
+  tipAmountDisplay.textContent = tipPerPerson.toFixed(2);
+  totalAmountDisplay.textContent = totalPerPerson.toFixed(2);
+};
