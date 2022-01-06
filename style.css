@@ -13,11 +13,14 @@ html {
 body {
   position: relative;
   min-height: 100vh;
-  min-width: 37rem; 
+  min-width: 37rem;
 }
 
-input, button {
+input,
+button,
+#custom-tip {
   font-family: inherit;
+  font-size: 2rem;
 }
 
 header {
@@ -33,7 +36,7 @@ main {
   background-color: hsl(189, 41%, 97%);
   display: flex;
   flex-direction: column;
-  padding: 3rem 3rem;
+  padding: 3rem 3rem 5rem;
   border-radius: 2.5rem;
 }
 
@@ -60,7 +63,6 @@ input[type='number'] {
   color: hsl(183, 100%, 15%);
   padding-right: 1.5rem;
   text-align: right;
-  font-size: 1.8rem;
   font-weight: 600;
   letter-spacing: 0.2rem;
 }
@@ -99,7 +101,7 @@ input[type='number']::placeholder {
 }
 
 .input-container img {
-  max-width: 1rem;
+  max-width: 1.2rem;
   position: absolute;
   left: 1.2rem;
   top: 50%;
@@ -112,8 +114,6 @@ input[type='number']::placeholder {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-
-
 }
 
 .input-group.btns label {
@@ -127,7 +127,6 @@ input[type='number']::placeholder {
   width: 48%;
   margin-bottom: 1.2rem;
   border-radius: 0.3rem;
-  font-size: 1.8rem;
 }
 
 .input-group.btns > button {
@@ -177,15 +176,10 @@ input[type='number']::placeholder {
 .price {
   color: hsl(172, 67%, 45%);
   font-weight: 700;
-  font-size: 2.4rem;
+  font-size: 2.8rem;
   flex: 2;
   text-align: right;
 }
-
-
-
-
-
 
 /* RESET BUTTON  */
 
@@ -193,6 +187,7 @@ input[type='number']::placeholder {
   border: none;
   min-width: 100%;
   padding: 1rem 0;
+  border-radius: 0.5rem;
   background-color: hsl(184, 14%, 56%);
   color: hsl(186, 14%, 43%);
   font-weight: 600;
