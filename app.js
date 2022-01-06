@@ -30,3 +30,24 @@ numOfPeople.addEventListener('input', (event) => {
 });
 
 // 3. allow reset button to be clickable when there is user input
+
+// MAIN APP FUNCTION
+// calculate tip per person and total per person based on:
+// 1) total bill amount, 2) tip percentage, 3) number of people
+
+const splitBill = (billAmount, tipPercentage, numOfPpl) => {
+  // calculate tip amount
+  const tipTotal = billAmount * (tipPercentage / 100);
+
+  // calculate tip per person
+  const tipPerPerson = tipTotal / numOfPpl;
+
+  // calculate total per person
+  const totalPerPerson = (billAmount + tipTotal) / numOfPpl;
+
+  return { tipPerPerson, totalPerPerson };
+};
+
+// get all user input and calculate 
+const inputs = document.querySelector('input');
+console.log(inputs)
