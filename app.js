@@ -1,3 +1,8 @@
+// initialize the 3 main variables
+let billAmount = 0;
+let tipPercentage = 0;
+let numOfPpl = 0;
+
 // UI LOGIC
 
 // 1. add an active style class to whichever tip button clicked
@@ -11,6 +16,10 @@ tipBtns.forEach((btn) => {
 
     // then add active class to the current clicked button
     event.target.classList.add('tip-btn-active');
+
+    // store clicked button's tip percentage value into actual variabble
+    const tip = parseFloat(event.target.dataset.tipPercentage);
+    tipPercentage = tip;
   });
 });
 
@@ -26,6 +35,7 @@ numOfPeople.addEventListener('input', (event) => {
   } else {
     event.target.previousElementSibling.style.display = 'none';
     event.target.classList.remove('error-outline');
+    numOfPpl = numInput;
   }
 });
 
@@ -48,6 +58,9 @@ const splitBill = (billAmount, tipPercentage, numOfPpl) => {
   return { tipPerPerson, totalPerPerson };
 };
 
-// get all user input and calculate 
-const inputs = document.querySelector('input');
-console.log(inputs)
+// get user input value
+const bill = document.querySelector('#bill-amount');
+bill.addEventListener('input', (event) => {
+  billAmount = parseFloat(event.target.value);
+});
+
