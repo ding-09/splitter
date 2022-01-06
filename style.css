@@ -129,15 +129,16 @@ input[type='number']::placeholder {
   border-radius: 0.3rem;
 }
 
-.input-group.btns > button {
+.tip-btn {
   background-color: hsl(183, 100%, 15%);
   color: hsl(0, 0%, 100%);
   font-weight: 700;
   border: none;
   padding: 1rem 0;
+  transition: all 0.2s;
 }
 
-.active-tip {
+.tip-btn-active {
   background-color: hsl(172, 67%, 45%);
   color: hsl(183, 100%, 15%);
 }
