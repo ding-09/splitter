@@ -85,3 +85,30 @@ const calculateAndUpdate = () => {
   tipAmountDisplay.textContent = tipPerPerson.toFixed(2);
   totalAmountDisplay.textContent = totalPerPerson.toFixed(2);
 };
+
+// LOGIC FOR CUSTOM TIP
+// if custom tip is clicked, deselect tip buttons and reset tip percentage back to 0
+const customTip = document.querySelector('#custom-tip');
+customTip.addEventListener('click', (event) => {
+  // iterate through tip buttons to remove active class
+  tipBtns.forEach((btn) => {
+    if (btn.classList.contains('tip-btn-active')) {
+      btn.classList.remove('tip-btn-active');
+    }
+  });
+
+  // reset tip percentage to 0
+  tipPercentage = 0;
+
+  // reset info-display to $0.00
+  tipAmountDisplay.textContent = '0.00';
+  totalAmountDisplay.textContent = '0.00';
+});
+
+customTip.addEventListener('input', (event) => {
+  if (event.target.value) {
+    tipPercentage = parseFloat(event.target.value);
+    console.log(tipPercentage);
+    calculateAndUpdate();
+  }
+});
