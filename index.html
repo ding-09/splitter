@@ -30,7 +30,8 @@
           <label for="bill-amount">Bill</label>
           <div class="input-container">
             <input
-              type="text"
+              type="number"
+              step="any"
               name="bill-amount"
               id="bill-amount"
               placeholder="0"
@@ -45,7 +46,7 @@
           <button class="tip-btn" data-tip-percentage="15">15%</button>
           <button class="tip-btn" data-tip-percentage="20">20%</button>
           <button class="tip-btn" data-tip-percentage="25">25%</button>
-          <input type="text" id="custom-tip" placeholder="Custom" />
+          <input type="number" step="any" id="custom-tip" placeholder="Custom" />
         </div>
         <div class="input-group">
           <label for="num-of-ppl">Number of People</label>
