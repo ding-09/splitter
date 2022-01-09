@@ -8,10 +8,11 @@ html {
   font-size: 62.5%;
   font-family: 'Roboto Mono', monospace;
   background-color: hsl(185, 41%, 84%);
+  position: relative;
 }
 
 body {
-  position: relative;
+  /* position: relative; */
   min-height: 100vh;
   min-width: 37rem;
 }
@@ -42,7 +43,7 @@ main {
 
 footer {
   position: absolute;
-  bottom: 0rem;
+  bottom: 0;
   right: 0;
 }
 
@@ -114,18 +115,17 @@ input[type='number']::placeholder {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  gap: 1.5rem;
 }
 
 .input-group.btns label {
   flex: 100%;
-  margin-bottom: 1rem;
 }
 
 .input-group.btns > *:not(label) {
   min-height: 3.8rem;
-  max-width: 48%;
-  width: 48%;
-  margin-bottom: 1.2rem;
+  max-width: 47%;
+  width: 47%;
   border-radius: 0.4rem;
 }
 
