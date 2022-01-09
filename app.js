@@ -5,6 +5,19 @@ let numOfPpl = 0;
 
 // UI LOGIC
 
+// enable reset button if there is input from any one of the input fields
+const resetBtn = document.querySelector('.reset');
+const main = document.querySelector('main');
+main.addEventListener('click', () => {
+  if (billAmount || tipPercentage || numOfPpl) {
+    // remove disabled attribute
+    resetBtn.removeAttribute('disabled');
+
+    // add active class
+    resetBtn.classList.add('reset-btn-active');
+  }
+});
+
 // 1. add an active style class to whichever tip button clicked
 const tipBtns = document.querySelectorAll('.tip-btn');
 tipBtns.forEach((btn) => {
@@ -20,6 +33,8 @@ tipBtns.forEach((btn) => {
     // store clicked button's tip percentage value into actual variabble
     const tip = parseFloat(event.target.dataset.tipPercentage);
     tipPercentage = tip;
+
+    // calculate and update if all variables have value
     if (billAmount && tipPercentage && numOfPpl) {
       calculateAndUpdate();
     }
@@ -44,8 +59,6 @@ numOfPeople.addEventListener('input', (event) => {
     }
   }
 });
-
-// 3. allow reset button to be clickable when there is user input
 
 // MAIN APP FUNCTION
 // calculate tip per person and total per person based on:
@@ -112,4 +125,27 @@ customTip.addEventListener('input', (event) => {
       calculateAndUpdate();
     }
   }
+});
+
+// reset everything if reset button is clicked
+resetBtn.addEventListener('click', () => {
+  billAmount = 0;
+  tipPercentage = 0;
+  numOfPpl = 0;
+  tipAmountDisplay.textContent = '0.00';
+  totalAmountDisplay.textContent = '0.00';
+
+  // input field reset
+  bill.value = '';
+  customTip.value = '';
+  numOfPeople.value = '';
+
+  // deselect any active tip button
+  tipBtns.forEach((btn) => {
+    btn.classList.remove('tip-btn-active');
+  });
+
+  // set reset button back to disabled and remove active class
+  resetBtn.setAttribute('disabled', '');
+  resetBtn.classList.remove('reset-btn-active');
 });

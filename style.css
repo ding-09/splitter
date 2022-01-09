@@ -203,9 +203,12 @@ input[type='number']::placeholder {
   margin-top: auto;
   padding: 1rem 0;
   border-radius: 0.5rem;
-  background-color: hsla(183, 32%, 50%, 0.657);
-  color: hsl(186, 20%, 39%);
   font-weight: 500;
+}
+
+.reset-btn-active {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
 }
 
 /* MEDIA QUERIES */
