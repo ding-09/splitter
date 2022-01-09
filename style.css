@@ -8,11 +8,9 @@ html {
   font-size: 62.5%;
   font-family: 'Roboto Mono', monospace;
   background-color: hsl(185, 41%, 84%);
-  position: relative;
 }
 
 body {
-  /* position: relative; */
   min-height: 100vh;
   min-width: 37rem;
 }
@@ -37,14 +35,17 @@ main {
   background-color: hsl(189, 41%, 97%);
   display: flex;
   flex-direction: column;
-  padding: 3rem 3rem 5rem;
+  padding: 3rem 3rem 4rem;
+  margin-bottom: 1rem;
   border-radius: 2.5rem;
+  position: relative;
 }
 
 footer {
   position: absolute;
-  bottom: 0;
   right: 0;
+  max-width: 50%;
+  text-align: right;
 }
 
 .user-inputs {
