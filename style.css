@@ -11,8 +11,8 @@ html {
 }
 
 body {
-  min-height: 100vh;
   min-width: 37rem;
+  position: relative;
 }
 
 input,
@@ -38,12 +38,12 @@ main {
   padding: 3rem 3rem 4rem;
   margin-bottom: 1rem;
   border-radius: 2.5rem;
-  position: relative;
 }
 
 footer {
   position: absolute;
   right: 0;
+  bottom: -3rem;
   max-width: 50%;
   text-align: right;
 }
