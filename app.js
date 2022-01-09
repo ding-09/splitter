@@ -30,6 +30,12 @@ tipBtns.forEach((btn) => {
     // then add active class to the current clicked button
     event.target.classList.add('tip-btn-active');
 
+    // remove custom tip value if there is one 
+    if (tipPercentage) {
+      tipPercentage = 0;
+      customTip.value = '';
+    }
+
     // store clicked button's tip percentage value into actual variabble
     const tip = parseFloat(event.target.dataset.tipPercentage);
     tipPercentage = tip;
