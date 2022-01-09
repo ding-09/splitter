@@ -108,7 +108,8 @@ customTip.addEventListener('click', (event) => {
 customTip.addEventListener('input', (event) => {
   if (event.target.value) {
     tipPercentage = parseFloat(event.target.value);
-    console.log(tipPercentage);
-    calculateAndUpdate();
+    if (billAmount && numOfPpl) {
+      calculateAndUpdate();
+    }
   }
 });
