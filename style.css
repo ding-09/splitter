@@ -67,7 +67,8 @@ input[type='number'] {
   letter-spacing: 0.2rem;
 }
 
-input[type='text']:focus, input[type='number']:focus {
+input[type='text']:focus,
+input[type='number']:focus {
   outline: 0.2rem solid hsl(172, 46%, 51%);
 }
 
@@ -125,7 +126,7 @@ input[type='number']::placeholder {
   max-width: 48%;
   width: 48%;
   margin-bottom: 1.2rem;
-  border-radius: 0.3rem;
+  border-radius: 0.4rem;
 }
 
 .tip-btn {
@@ -197,11 +198,25 @@ input[type='number']::placeholder {
 
 .reset {
   min-width: 100%;
-  margin-top: 1rem;
   border: none;
+  margin-top: auto;
   padding: 1rem 0;
   border-radius: 0.5rem;
   background-color: hsla(183, 32%, 50%, 0.657);
   color: hsl(186, 20%, 39%);
   font-weight: 500;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (min-width: 768px) {
+  main {
+    flex-direction: row;
+    gap: 3.5rem;
+  }
+  .user-inputs {
+    flex: 2;
+  }
+  .info-display {
+    flex: 1;
+  }
 }
