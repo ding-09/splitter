@@ -1,7 +1,15 @@
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+:root {
+  --labels: 1.3rem;
+  --inputs: 2rem;
+  --price: 3rem;
 }
 
 html {
@@ -16,26 +24,16 @@ body {
   position: relative;
 }
 
-input,
-button,
-#custom-tip {
-  font-family: inherit;
-}
-
 header {
   text-align: center;
-}
-
-header figure {
-  max-width: 50%;
-  margin: 4rem auto 3rem;
+  margin: 5rem 0 3rem;
 }
 
 main {
   background-color: hsl(189, 41%, 97%);
   display: flex;
   flex-direction: column;
-  padding: 3rem 3rem 4rem;
+  padding: 3rem 2rem 4rem;
   margin-bottom: 1rem;
   border-radius: 2.5rem;
 }
@@ -47,18 +45,10 @@ footer {
   text-align: right;
 }
 
-/* FONT-SIZES */
-:root {
-  --labels: 1.3rem;
-  --inputs: 2rem;
-  --price: 3rem;
-}
-
-.user-inputs {
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-  margin-bottom: 3rem;
+input,
+button,
+#custom-tip {
+  font-family: inherit;
 }
 
 /* INPUT STYLES  */
@@ -94,6 +84,15 @@ input[type='number']::placeholder {
   font-weight: 600;
 }
 
+.user-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+  padding: 0 1rem;
+}
+
+/* USER INPUT STYLES */
 .input-group > label {
   font-weight: 500;
   font-size: var(--labels);
@@ -102,7 +101,6 @@ input[type='number']::placeholder {
 
 .input-container {
   position: relative;
-  height: 3.5rem;
   min-width: 100%;
   margin-top: 0.8rem;
 }
@@ -121,7 +119,7 @@ input[type='number']::placeholder {
   transform: translate(0, -50%);
 }
 
-/* BUTTON GROUP */
+/* BUTTON GROUP STYLES */
 .input-group.btns {
   display: flex;
   justify-content: space-between;
@@ -134,7 +132,6 @@ input[type='number']::placeholder {
 }
 
 .input-group.btns > *:not(label) {
-  min-height: 3.8rem;
   max-width: 47%;
   width: 47%;
   border-radius: 0.4rem;
@@ -155,7 +152,7 @@ input[type='number']::placeholder {
   color: hsl(183, 100%, 15%);
 }
 
-/* ERROR STYLES FOR NUMBER OF PEOPLE */
+/* ERROR STYLES FOR NUMBER OF PEOPLE INPUT */
 .error-msg {
   color: hsl(0, 61.9%, 67.1%);
   font-weight: 700;
@@ -171,7 +168,6 @@ input[type='number']::placeholder {
 }
 
 /* DISPLAY INFO */
-
 .info-display {
   background-color: hsl(183, 100%, 15%);
   padding: 3rem 1.8rem 2rem;
@@ -194,6 +190,7 @@ input[type='number']::placeholder {
 
 .per-person {
   color: hsl(184, 14%, 56%);
+  font-size: var(--labels);
 }
 
 .price {
@@ -212,12 +209,14 @@ input[type='number']::placeholder {
   margin-top: auto;
   padding: 1rem 0;
   border-radius: 0.5rem;
-  font-weight: 500;
+  font-weight: 700;
+  font-size: 1.5rem;
 }
 
 .reset-btn-active {
   background-color: hsl(172, 67%, 45%);
   color: hsl(183, 100%, 15%);
+  cursor: pointer;
 }
 
 /* MEDIA QUERIES */
